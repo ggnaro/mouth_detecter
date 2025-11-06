@@ -15,6 +15,32 @@ Currently, provided python and inference on one image only, to modified the imag
 ## Data
 utilizing with [Microsoft Synthetics](https://github.com/microsoft/FaceSynthetics),  totally 99,773 volumes.
 
+### Data sampling
+Parser the face area according to official guidance, every parts following to specific value:
+- BACKGROUND = 0
+- SKIN = 1
+- NOSE = 2
+- RIGHT_EYE = 3
+- LEFT_EYE = 4
+- RIGHT_BROW = 5
+- LEFT_BROW = 6
+- RIGHT_EAR = 7
+- LEFT_EAR = 8
+- **MOUTH_INTERIOR = 9**
+- **TOP_LIP = 10**
+- **BOTTOM_LIP = 11**
+- NECK = 12
+- HAIR = 13
+- BEARD = 14
+- CLOTHING = 15
+- GLASSES = 16
+- HEADWEAR = 17
+- FACEWEAR = 18
+- IGNORE = 255
+
+Or, here's a sampling script to parsering the area of face, [parser_facesynthetics.ipynb](./parser_facesynthetics.ipynb)<br>
+![parser](./assets/parser.png)<br>
+
 ## Training framweork
 Tensorflow keras with Unet, refer to an [introduction](https://github.com/veer2701/Image-Segmentation-with-U-Net/blob/main/6%20Image_segmentation_Unet_v2.ipynb)
 
